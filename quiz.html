@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Quiz – MockTest Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Mukta:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="phone-frame quiz-page">
+
+        <!-- ===== TOP BAR ===== -->
+        <div class="quiz-topbar">
+            <div class="quiz-tag" id="secTag">Chapter 1</div>
+            <div class="progress-wrap">
+                <span class="q-counter" id="qNum">Q 1 / 20</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progFill" style="width:0%"></div>
+                </div>
+            </div>
+            <div class="timer-box" id="timerBox">
+                <span class="timer-icon">⏱</span>
+                <span id="timerVal">60</span>
+                <span class="timer-s">s</span>
+            </div>
+        </div>
+
+        <!-- ===== QUIZ SCROLL AREA ===== -->
+        <div class="quiz-scroll" id="quizScroll">
+
+            <!-- Question Card -->
+            <div class="q-card" id="qCard">
+                <div class="q-top">
+                    <span class="q-badge" id="qBadge">Q1</span>
+                    <span class="q-chapter" id="qChapter">Chapter 1</span>
+                </div>
+                <p class="q-text" id="qText">Loading...</p>
+                <div class="q-img-wrap hidden" id="qImgWrap">
+                    <img id="qImg" src="" alt="Question Image" class="q-img" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Options List -->
+            <div class="opts-list" id="optsList">
+                <!-- Dynamically injected by quiz.js -->
+            </div>
+
+            <!-- Spacer for footer -->
+            <div style="height:16px"></div>
+
+        </div>
+
+        <!-- ===== FOOTER ACTIONS ===== -->
+        <div class="quiz-footer">
+            <button class="btn-skip" id="skipBtn" onclick="skipQuestion()">
+                ⏭ Skip
+            </button>
+            <button class="btn-submit" id="submitBtn" onclick="submitAnswer()">
+                ✅ Submit Answer
+            </button>
+        </div>
+
+    </div>
+
+    <script src="config.js"></script>
+    <script src="data1.js"></script>
+    <script src="data2.js"></script>
+    <script src="data3.js"></script>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
